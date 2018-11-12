@@ -1,0 +1,60 @@
+import java.util.Scanner;
+/**
+ * Write a description of class CountingStrings here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class CountingStrings
+{
+    public static void main (String[] args)
+    {
+        int i = 0;
+        int enters = 0;
+        int sum = 0;  //System.out.println ("1");
+
+        Scanner scan = new Scanner(System.in);
+
+        do 
+        {
+            System.out.println ("Enter an word");
+
+            if (scan.hasNext())  // while non-integers are present...
+            {
+                String a = scan.next();
+                //System.out.println ("1");
+                System.out.println (a);
+                if (a.equalsIgnoreCase("q"))
+                {
+                i++;
+                //System.out.println ("2");
+                System.out.println ("You entered words with STIR " + enters + " times");
+            }
+            else
+                if (a.length() >= 4)
+                {
+                    System.out.println ("3");
+                    if (a.substring(0,4).equalsIgnoreCase("stir"))
+                    {
+                        System.out.println ("4");
+                     
+                    enters++;
+                }
+                    
+                }
+                
+            }
+            else 
+            {
+                System.out.println ("Not a Number");
+            }
+
+        }
+        while (i < 1);
+
+        
+        
+    }
+}
+
+
